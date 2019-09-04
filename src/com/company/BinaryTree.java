@@ -7,27 +7,28 @@ import java.util.ArrayList;
  */
 public interface BinaryTree {
 
-    public int height(Node temp);
-    public int level(Node temp1, int x, int level);
-    public void levelOrderTraversal(Node temp);
-    public void inorderTraversal(Node temp);
-    public int countLeaf(Node temp);
-    public int countNonLeaf(Node temp);
-    public int width(Node temp);
-    public int sumOfTree(Node temp);
-    public int sumOfLeftLeaf(Node temp);
-    public void printLeftView(Node temp, int level);
-    public void printRightView(Node temp, int level);
-    public void printTopView(Node temp);
-    public void printLevelOrderTraversalLine(Node temp);
-    public void printReverseLevelOrderTraversal(Node temp);
-    public void printSpiralLevelOrderTraversal(Node temp);
-    public boolean isSibling(Node temp, int x, int y);
-    public int isSumTree(Node temp);
-    public int sum(Node temp);
-    public boolean isPerfectTree(Node temp, int height, int level);
-    public boolean isLeaf(Node temp);
-    public void printRootToLeaf(Node temp, int[] list, int ptr);
-    public void printRootToLeafShortest(Node temp);
+    int height(Node temp);
+    int level(Node temp1, int x, int level);
+    void levelOrderTraversal(Node temp);
+    void inorderTraversal(Node temp);
+    int countLeaf(Node temp);
+    int countNonLeaf(Node temp);
+    int width(Node temp);
+    int sumOfTree(Node temp);
+    int sumOfLeftLeaf(Node temp);
+    void printLeftView(Node temp, int level);
+    void printRightView(Node temp, int level);
+    void printTopView(Node temp);
+    void printbottomView(Node temp);
+    void printLevelOrderTraversalLine(Node temp);
+    void printReverseLevelOrderTraversal(Node temp);
+    void printSpiralLevelOrderTraversal(Node temp);
+    boolean isSibling(Node temp, int x, int y);
+    int isSumTree(Node temp);
+    int sum(Node temp);
+    boolean isPerfectTree(Node temp, int height, int level);
+    boolean isLeaf(Node temp);
+    void printRootToLeaf(Node temp, int[] list, int ptr);
+    void printRootToLeafShortest(Node temp);
 
 }
