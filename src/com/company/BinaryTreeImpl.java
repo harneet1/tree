@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author Harneet
@@ -126,8 +123,29 @@ public class BinaryTreeImpl implements BinaryTree{
 
         if(temp == null)
             return;
-
-
+        class NodeObj{
+            Node node;
+            int hd;
+            NodeObj(Node node, int hd){
+                this.node = node;
+                this.hd = hd;
+            }
+        }
+        Queue<NodeObj> q = new LinkedList<>();
+        q.add(new NodeObj(temp, 0));
+        Map<Integer, Node> map = new TreeMap<>();
+        while (!q.isEmpty()){
+            NodeObj t = q.poll();
+            if(!map.containsKey(t.hd))
+                map.put(t.hd, t.node);
+            if(t.node.left != null)
+                q.add(new NodeObj(t.node.left, t.hd-1));
+            if(t.node.right != null)
+                q.add(new NodeObj(t.node.right, t.hd+1));
+        }
+        for(Map.Entry<Integer, Node> entry: map.entrySet()){
+            System.out.print(entry.getValue().data + " ");
+        }
     }
 
     @Override
