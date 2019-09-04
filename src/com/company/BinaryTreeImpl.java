@@ -7,7 +7,8 @@ import java.util.*;
  */
 public class BinaryTreeImpl implements BinaryTree{
 
-    static int maxLevel = 0;
+    static int maxLevelLeft = 0;
+    static int maxLevelRight = 0;
 
     @Override
     public int height(Node temp) {
@@ -105,17 +106,25 @@ public class BinaryTreeImpl implements BinaryTree{
     public void printLeftView(Node temp, int level) {
         if(temp == null)
             return;
-        if(maxLevel < level){
+        if(maxLevelLeft < level){
             System.out.print(temp.data + " ");
-            maxLevel = level;
+            maxLevelLeft = level;
         }
         printLeftView(temp.left, level + 1);
         printLeftView(temp.right, level + 1);
     }
 
     @Override
-    public void printRightView(Node temp) {
+    public void printRightView(Node temp, int level) {
 
+        if(temp == null)
+            return;
+        if(maxLevelRight < level){
+            System.out.print(temp.data + " ");
+            maxLevelRight = level;
+        }
+        printRightView(temp.right, level+1);
+        printRightView(temp.left, level+1);
     }
 
     @Override

@@ -53,8 +53,13 @@ public class Main {
         obj.printRootToLeaf(root, new int[1000], 0);
         System.out.print("Root to Leaf Shortest Path ");
         obj.printRootToLeafShortest(root);
+        System.out.println();
         System.out.println("TOP view of tree");
         obj.printTopView(root);
+        System.out.println();
+        System.out.println("Right view of tree");
+        obj.printRightView(root, 1);
+
 
     }
 }

@@ -17,7 +17,7 @@ public interface BinaryTree {
     public int sumOfTree(Node temp);
     public int sumOfLeftLeaf(Node temp);
     public void printLeftView(Node temp, int level);
-    public void printRightView(Node temp);
+    public void printRightView(Node temp, int level);
     public void printTopView(Node temp);
     public void printLevelOrderTraversalLine(Node temp);
     public void printReverseLevelOrderTraversal(Node temp);
